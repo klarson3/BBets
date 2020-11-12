@@ -43,7 +43,7 @@ print(sortProfit[25])
 print(sortProfit[975])
 ```
 
-The 95 percent confidence level shows that the values range from `r sortProfit[25]` to `r sortProfit[975]`. However every time you run this code, the range will always change. 
+The 95% confidence level shows that the values range from `r sortProfit[25]` to `r sortProfit[975]`. However every time you run this code, the range will always change. 
 
 
 ```{r}

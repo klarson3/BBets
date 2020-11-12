@@ -94,7 +94,7 @@ saveProfit[run]=profit
 hist(saveProfit)
 ```
 
-To make this bet where Dr. J would lose more than 2:1 in the bet, he would have to change the bet to approximately 4.75:1. 
+To make this bet where Dr. J would lose more than 2:1 in the bet, he would have alter change the bet to approximately 4.75:1. 
 
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 

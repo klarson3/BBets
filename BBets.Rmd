@@ -1,7 +1,7 @@
 ---
 title: "Brownlows Bets"
-author: "Your Name"
-date: "Year 2020"
+author: "Kristina Larson"
+date: "November 11, 2020"
 output: 
   html_document:
     number_sections: true
@@ -16,7 +16,85 @@ require(knitr)
 ```
 ### `r as.character(Sys.Date())`
 
+```{r}
+days=1:365
+saveProfit=vector("numeric")
+for(run in 1:1000){
 
+  
+profit=0
+for(i in 1:637){ 
+  bdays=sample(days,size=35,replace=TRUE)
+  n=length(unique(bdays))
+  if(n<35){
+    profit=profit+1
+  } else{profit=profit-2}
+}
+saveProfit[run]=profit
+}
+
+```
+```{r}
+hist(saveProfit)
+```
+```{r}
+sortProfit=sort(saveProfit)
+print(sortProfit[25])
+print(sortProfit[975])
+```
+
+The 95 percent confidence level shows that the values range from `r sortProfit[25]` to `r sortProfit[975]`. However every time you run this code, the range will always change. 
+
+
+```{r}
+days=1:365
+saveProfit=vector("numeric")
+for(run in 1:1000){
+
+  
+profit=0
+for(i in 1:637){ 
+  bdays=sample(days,size=28,replace=TRUE)
+  n=length(unique(bdays))
+  if(n<28){
+    profit=profit+1
+  } else{profit=profit-2}
+}
+saveProfit[run]=profit
+}
+
+```
+```{r}
+hist(saveProfit)
+```
+
+
+
+We know that a class size of 35 is too large of a class for a 2:1 ratio. A class size of either 28 or 29 is the right size for Dr J to have a chance of 2:1 or lower of winning this bet. 
+
+```{r}
+days=1:365
+saveProfit=vector("numeric")
+for(run in 1:1000){
+
+  
+profit=0
+for(i in 1:637){ 
+  bdays=sample(days,size=35,replace=TRUE)
+  n=length(unique(bdays))
+  if(n<35){
+    profit=profit+1
+  } else{profit=profit-4.75}
+}
+saveProfit[run]=profit
+}
+
+```
+```{r}
+hist(saveProfit)
+```
+
+To make this bet where Dr. J would lose more than 2:1 in the bet, he would have to change the bet to approximately 4.75:1. 
 
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 
